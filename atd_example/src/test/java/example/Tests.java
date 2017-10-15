@@ -52,7 +52,7 @@ public class Tests {
 
         String os = detectOS();
 
-        String driverPath = "/Volumes/SD/repos/ATD_local/atd_exampel/drivers/";
+        String driverPath = "/Volumes/SD/repos/ATD_local/atd_example/drivers/";
 
         switch (os) {
             case "windows":
