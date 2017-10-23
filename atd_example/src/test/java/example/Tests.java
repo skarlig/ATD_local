@@ -52,7 +52,10 @@ public class Tests {
 
         String os = detectOS();
 
-        String driverPath = "/Volumes/SD/repos/ATD_local/atd_example/drivers/";
+        String[] location = Tests.class.getProtectionDomain().getCodeSource().getLocation().toString().
+                split("build");
+
+        String driverPath = location[0].replace("file:", "").concat("/drivers/");
 
         switch (os) {
             case "windows":
