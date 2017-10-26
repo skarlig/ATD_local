@@ -44,14 +44,12 @@ public class Tests {
     @AfterMethod
     public void closeDriver() {
         if (driver != null) {
-
             driver.quit();
         }
     }
 
 
     private void createBrowserDriver() {
-
         String os = detectOS();
 
         String[] location = Tests.class.getProtectionDomain().getCodeSource().getLocation().toString().
@@ -63,7 +61,6 @@ public class Tests {
             case "windows":
                 System.setProperty("webdriver.gecko.driver", driverPath + "geckodriver_windows.exe");
                 System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver_windows.exe");
-
                 break;
 
             case "linux":
@@ -76,15 +73,11 @@ public class Tests {
                 System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver_mac");
                 break;
         }
-
         if (System.getenv("BROWSER").contains("firefox")) {
             driver = new FirefoxDriver();
         } else {
             driver = new ChromeDriver();
         }
-
-
-
     }
 
     private String detectOS() {
